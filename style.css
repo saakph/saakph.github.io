@@ -1,0 +1,249 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #22201e;
+    text-align: center;
+    
+}
+
+h1 {
+    color: #a08c5b;
+    -webkit-text-stroke: #3e3723 1px;
+    background-color: #fff2d3;
+    margin: 5px;
+    padding: 10px;
+    font-size: 45px;
+    font-family: "Quattrocento", serif;
+    font-weight: 700;
+    border:#a08c5b 5px double;
+}
+
+#main-game-section {
+    width: 100%;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    height: fit-content;
+}
+
+#start-game-section {
+   width: 55vw;
+   background: linear-gradient(180deg, #847a63, #d1c2b2);
+   background-size: cover;
+   background-repeat: no-repeat;
+   border: 3px double #fff2d3;
+   margin: 20px auto;
+   border-radius: 10px;
+   color: #22201e;
+   font-weight: 700;
+   font-family: "Josefin Slab", serif;
+   font-size: 30px;
+   padding: 10px;
+
+}
+
+#start-game-section p {
+    padding: 10px;
+    margin: 5px;
+    border: 2px dotted #E9FFF9;
+    border-radius: 15px;
+}
+
+#start-game-section h3 {
+    font-size: 35px;
+    margin: 10px;
+    font-family: "Quattrocento", serif;
+    background-color: #e3d6b8;
+    border-radius: 10px;
+    padding: 10px 5px;
+    color: #796532;
+    border: 1.5px solid #796532;
+    -webkit-text-stroke: 1.2px #3e3723;
+}
+
+#user-input-section {
+    background-color: #847a6384;
+    color: #E9FFF9;
+    width: 60vw;
+    margin: 20px auto;
+    padding: 15px;
+    font-size: 25px;
+    font-family: 'Segoe UI';
+    border-radius: 10px;
+    border: 2px double #d1c2b2;
+}
+
+#user-input-section div {
+    border: 2px dotted #E9FFF9;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 10px;
+}
+
+#user-input-section h4 {
+    color: #d1c2b2;
+    font-family: "Josefin Slab", serif;
+    font-size: 22px;
+    margin: 5px;
+}
+
+input {
+    background-color: #22201e;
+    font-size: 25px;
+    width: 50px;
+    font-family: "Quattrocento", serif;
+    color: #d1c2b2;
+    padding: 5px;
+
+    border: 1px double #E9FFF9;
+}
+
+#user-input {
+    width: 200px;
+}
+
+#show-players-header {
+    margin: 15px;
+    font-weight: 230;
+    font-family: 'Segoe UI';
+    background-color: #22201e;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+#scoreboard {
+    width: 20vw;
+    background-color: #E9FFF9;
+    padding: 5px;
+    font-size: 22px;
+    color: #e3d6b8;
+    font-family: 'Segoe UI';
+    border-radius: 10px;
+    transition: all 0.5s linear;
+    margin: 20px;
+}
+
+#scoreboard div {
+    background-color: #22201e;
+    margin: 5px;
+    padding: 7px;
+    border-radius: 10px;
+    border: 2px double #d1c2b2;
+
+}
+
+#scoreboard h4 {
+    font-weight: 200;
+}
+
+#scoreboard h2 {
+    color: #3e3723;
+}
+
+#card-div {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60vw;
+    position: relative;
+    transition: all 0.5s linear;
+    padding: 10px;
+}
+
+#turn-display {
+    font-family: "Quattrocento", serif;
+    font-size: 30px;
+    margin: 20px;
+    color: #e3d6b8;
+    -webkit-text-stroke: 0.5px #E9FFF9;
+    background-color: black;
+    border: 2px double #d1c2b2;
+    border-radius: 15px;
+    padding: 5px;
+}
+
+
+p {
+    margin: 0;
+    font-size: 25px;
+}
+
+.cards {
+    margin: 5px;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.back, .front {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    backface-visibility: hidden;
+    padding: 5px;
+}
+
+#win-display {
+    font-size: 30px;
+    width: fit-content;
+    margin: 15px auto;
+    border-radius: 10px;
+    padding: 10px;
+    color: #22201e;
+}
+
+#reset-game-button {
+    box-shadow: 0 4px 0 #e3d6b8;
+}
+
+#reset-game-button:active {
+    transform: translateY(3px);
+    box-shadow: 0 1px 0 #e3d6b8;
+}
+
+.back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(180deg, #22201e, #3e3723);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 70px;
+    color: #fff2d3;
+    transform: rotateY(180deg);
+}
+
+.front {
+    background-image: url(design.PNG);
+    background-size: contain;
+    background-color: white;
+    z-index: 1;
+}
+
+button {
+    margin: 10px auto;
+    background-color: #4b4845;
+    color: #d1c2b2;
+    border: 2px solid #22201e;
+    box-shadow: 0 4px 0 #22201e;
+    font-size: 25px;
+    border-radius: 15px;
+    padding: 10px;
+    font-family: 'Segoe UI';
+    transition: background-color 0.5s linear, color 0.5s linear, transform 0.2s linear, box-shadow 0.2s linear;
+    
+}
+
+button:hover {
+    background-color: #695c3b;
+    color: #fff2d3;
+}
+
+button:active {
+    box-shadow: 0 1px 0 #22201e;
+    transform: translateY(3px);
+}

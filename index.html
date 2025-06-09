@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+    <head>
+        <title> Saakshi Phatak | Memory Game </title>
+        
+        <!-- Link CSS -->
+        <link rel="stylesheet" href="style.css">
+
+        <!-- Link Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Quattrocento:wght@400;700&display=swap" rel="stylesheet">
+        
+    </head>
+    
+    <body>
+        
+        <!-- Main Title -->
+        <h1> Memory </h1>
+
+        <!-- Start Game Button -->
+        <div id = "start-game-section">
+            
+            <h3> Welcome to Memory! </h3>
+            <p> 
+                The goal of the game is to acquire as many pairs as possible. 
+                You can turn any two cards over. If they match, you get a point. If not, your turn ends. A keen eyesight and a good memory are crucial to winning. 
+            </p>
+            <p> Are you ready to test your memory? </p>
+            
+            <button id = "show-input" onclick = "showInput()"> Begin Game </button>
+            
+        </div>
+        
+        <div>
+        
+            <!-- Win Scenario -->
+            <h1 id = "win-display"></h1>
+            
+            <!-- Reset Game -->
+            <button id = "reset-game-button" onclick = "resetGame()"> Reset Game </button>
+            
+        </div>
+        
+        <!-- User Input Section -->
+        <div id = "user-input-section">
+            
+            <!-- User Input -->
+            <div>
+                <label for = "user-input" id = "user-input-label"> Enter Player 1's Name: </label>
+                <h4 id = "user-input-header"> You need between 2-7 players to begin the game. Click enter to submit each name. </h4>
+                <input id = "user-input" type = "text" autocomplete="off">
+            </div>
+
+            <!-- Show Players -->
+            <h3 id = "show-players-header"> Current Players: None </h3>
+            
+            <!-- Pattern Length / Amount of Cards -->
+            <div>
+                <label for = "pattern-length"> Enter Amount of Pairs: </label>
+                <input type = "number" max = "12" min = "5" value = "5" id = "pattern-length" oninput = "adjustDifficulty()">
+                <h4 id = "difficulty-header"> Difficulty: Easy </h4>
+            </div>
+            
+            <!-- Done Button -->
+            <button id = "start-game" onclick = "runGame()"> Done </button>
+
+
+        </div>
+        
+        <!-- Main Game -->
+        <div id = "main-game-section">
+            
+            <!-- Container for Layout Purposes -->
+            <div>
+                
+                <!-- Turn Display -->
+                <h3 id = "turn-display"></h3>
+
+                <div>
+                    <!-- Div for Cards -->
+                    <div id = "card-div"></div>
+                </div>
+                
+            </div>
+            
+            <!-- Scoreboard -->
+            <div id = "scoreboard">
+                <h2> Scoreboard </h2>
+            </div>
+            
+            
+        </div>        
+    </body>
+    
+    <!-- Link JS -->
+    <script src="code.js"></script>
+    
+    </html>
